@@ -16,7 +16,7 @@ class ShoppingListConsoleShould {
     fun beforeEach() {
         clearMocks(waitForUserInput, shoppingListService)
         outputStream = ByteArrayOutputStream()
-        val printer = PrinterFake(outputStream)
+        val printer = PrinterForByteArrayOutput(outputStream)
         console = ShoppingListConsole(waitForUserInput, shoppingListService, printer)
     }
 
